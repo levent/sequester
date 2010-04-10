@@ -24,3 +24,6 @@ gem 'capistrano'
 # group :test do
 #   gem 'webrat'
 # end
+
+gem 'warden'
+gem 'devise', '1.1.rc0'
