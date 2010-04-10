@@ -1,0 +1,23 @@
+/*
+  Name: Levent Ali
+  Date: April 2010
+  Description: Photographer's Portfolio
+  Version: 1.0
+  Author: Levent Ali
+  Autor URI: http://purebreeze.com
+*/
+
+/* Imports */
+@import url("reset.css");
+
+/*@import url("global-forms.css");*/
+
+/***** Global *****/
+/* Body */
+  body {
+    font-size: 87.5%; /* Base font size: 14px */
+    line-height: 1.429;
+    margin: 0;
+    padding: 0;
+  }
+
