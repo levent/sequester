@@ -3,7 +3,7 @@ dependencies:
   rails: 
     group: 
     - :default
-    version: = 3.0.0.beta2
+    version: = 3.0.0.beta3
   sqlite3-ruby: 
     group: 
     - :default
@@ -40,9 +40,9 @@ specs:
 - tzinfo: 
     version: 0.3.19
 - activesupport: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - activemodel: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - erubis: 
     version: 2.6.5
 - rack: 
@@ -52,7 +52,7 @@ specs:
 - rack-test: 
     version: 0.5.3
 - actionpack: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - mime-types: 
     version: "1.16"
 - polyglot: 
@@ -60,21 +60,21 @@ specs:
 - treetop: 
     version: 1.4.5
 - mail: 
-    version: 2.1.5.3
+    version: 2.2.0
 - text-hyphen: 
     version: 1.0.0
 - text-format: 
     version: 1.0.0
 - actionmailer: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - arel: 
     version: 0.3.3
 - activerecord: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - activeresource: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - bundler: 
-    version: 0.9.18
+    version: 0.9.19
 - highline: 
     version: 1.5.2
 - net-ssh: 
@@ -94,14 +94,14 @@ specs:
 - thor: 
     version: 0.13.4
 - railties: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - rails: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - sqlite3-ruby: 
     version: 1.2.5
 - unicorn: 
     version: 0.97.0
-hash: 1c8e1b77747c02dbd7f625604a9b91ed2641f6a0
+hash: 9a6ee94d1dedfd07474faa588c40a1fc850a53e0
 sources: 
 - Rubygems: 
     uri: http://rubygems.org
