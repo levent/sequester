@@ -14,10 +14,31 @@
 
 /***** Global *****/
 /* Body */
-  body {
-    font-size: 87.5%; /* Base font size: 14px */
-    line-height: 1.429;
-    margin: 0;
-    padding: 0;
-  }
+body {
+  font-size: 87.5%; /* Base font size: 14px */
+  line-height: 1.429;
+  margin: 0;
+  padding: 0;
+  font-family: helvetica;
+}
 
+h1 {
+  font-size: 200%;
+  padding: 0 20px;
+}
+
+#content {
+  background: #fff;
+  margin-bottom: 2em;
+  overflow: hidden;
+  padding: 0 20px 20px 20px;
+  width: 1024px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+span.coming_soon {
+  font-size: 0.6em;
+  color: #ddd;
+}
