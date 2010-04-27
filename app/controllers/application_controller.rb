@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   TheDomain = 'leventali.com'
 
   def ensure_domain
-    if request.env['HTTP_HOST'] != TheDomain && request.env['RAILS_ENV'] == "production"
+    if request.env['HTTP_HOST'] != TheDomain && Rails.env == "production"
       redirect_to TheDomain
     end
   end
