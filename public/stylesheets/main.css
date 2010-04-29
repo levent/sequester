@@ -42,3 +42,7 @@ span.coming_soon {
   font-size: 0.6em;
   color: #ddd;
 }
+
+.current_photo {
+  opacity: 0.5;
+}
