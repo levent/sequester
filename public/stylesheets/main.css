@@ -52,3 +52,18 @@ span.coming_soon {
   opacity: 0.5;
 }
 
+footer {
+  padding: 20px;
+  text-align: right;
+  width: 1024px;
+}
+
+footer a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #13636F;
+}
+
+footer a:hover {
+  color: #C72270;
+}
