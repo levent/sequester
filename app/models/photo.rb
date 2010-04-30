@@ -1,7 +1,6 @@
 class Photo < ActiveRecord::Base
   validates_presence_of :thumb_url
   validates_presence_of :url
-  named_scope :latest, :limit => 1
   default_scope :order => "created_at DESC"
   
   def thumb_url
