@@ -2,7 +2,7 @@ class PhotosController < ApplicationController
   
   # the homepage
   def index
-    redirect_to photo_path(Photo.latest[0])
+    redirect_to photo_path(Photo.first)
   end
   
   def show
