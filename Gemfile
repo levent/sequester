@@ -27,3 +27,4 @@ gem 'capistrano'
 
 gem 'warden'
 gem 'devise', '1.1.rc0'
+gem 'pseudocephalopod'
