@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-  validates_presence_of :thumb_url
+  is_sluggable :title
   validates_presence_of :url
   default_scope :order => "created_at DESC"
   
