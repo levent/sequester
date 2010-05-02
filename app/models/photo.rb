@@ -13,7 +13,7 @@ class Photo < ActiveRecord::Base
   end
   
   def next
-    next_photo = Photo.find(:all, :conditions => ["id > ?", id], :limit => 1)
-    next_photo.any? ? (return next_photo) : (return Photo.last)
+    next_photo = Photo.find(:first, :conditions => ["created_at < ?", created_at])
+    next_photo || Photo.first
   end
 end
