@@ -9,24 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100430143909) do
+ActiveRecord::Schema.define(:version => 20100502131902) do
 
   create_table "photos", :force => true do |t|
-    t.string   "url"
-    t.string   "title"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "cached_slug"
+    t.string    "url"
+    t.string    "title"
+    t.text      "description"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "cached_slug"
+    t.integer   "position"
   end
 
   add_index "photos", ["cached_slug"], :name => "index_photos_on_cached_slug"
 
   create_table "slugs", :force => true do |t|
-    t.string   "scope"
-    t.string   "slug"
-    t.integer  "record_id"
-    t.datetime "created_at"
+    t.string    "scope"
+    t.string    "slug"
+    t.integer   "record_id"
+    t.timestamp "created_at"
   end
 
   add_index "slugs", ["scope", "record_id", "created_at"], :name => "index_slugs_on_scope_and_record_id_and_created_at"
