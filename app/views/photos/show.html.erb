@@ -10,6 +10,8 @@
   <% end %>
 </div>
 
+<% content_for :title, " :: #{@photo.title}" %>
+
 <script type="text/javascript" charset="utf-8">
   $('#photo_holder').addClass('loading');
   $('.photo').hide();
