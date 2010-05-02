@@ -57,6 +57,14 @@ img.photo {
   -webkit-border-radius: 10px;
 }
 
+#photo_holder {
+  height: 685px;
+}
+
+.loading {
+  background: url(/images/spinner.gif) no-repeat center center;
+}
+
 #thumbnails img {
   border-radius: 10px;
   -moz-border-radius: 10px;

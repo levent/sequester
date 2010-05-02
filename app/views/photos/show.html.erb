@@ -1,5 +1,7 @@
 <% if @photo %>
-  <%= image_tag @photo.large_url, :title => @photo.title, :alt => @photo.title, :id => "photo_#{@photo.id}", :class => "photo" %>
+  <div id="photo_holder">
+    <%= image_tag @photo.large_url, :title => @photo.title, :alt => @photo.title, :id => "photo_#{@photo.id}", :class => "photo" %>
+  </div>
 <% end %>
 
 <div id="thumbnails">
@@ -7,3 +9,12 @@
     <%= link_to (image_tag photo.thumb_url, :title => photo.title, :alt => photo.title), photo_url(photo), :class => ("current_photo" if photo.cached_slug == params[:id]) %>
   <% end %>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+  $('#photo_holder').addClass('loading');
+  $('.photo').hide();
+  $('.photo').load(function () {
+    $(this).fadeIn(800);
+    $('#photo_holder').removeClass('loading');
+  });
+</script>
