@@ -76,7 +76,20 @@ img.photo {
 footer {
   font-size: 80%;
   padding: 20px;
+}
+
+footer p.copyright {
   text-align: right;
+}
+
+footer p.disclaimer {
+  text-align: center;
+  color: #ccc;
+  padding: 20px 0;
+}
+
+footer p.disclaimer:hover {
+  color: #000;
 }
 
 footer a {
