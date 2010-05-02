@@ -1,7 +1,5 @@
 <% if @photo %>
-  <div id="photo_holder">
-    <%= image_tag @photo.large_url, :title => @photo.title, :alt => @photo.title, :id => "photo_#{@photo.id}", :class => "photo" %>
-  </div>
+  <%= image_tag @photo.large_url, :title => @photo.title, :alt => @photo.title, :id => "photo_#{@photo.id}", :class => "photo" %>
 <% end %>
 
 <div id="thumbnails">

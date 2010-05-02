@@ -55,11 +55,6 @@ img.photo {
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-/*  display: none;*/
-}
-
-#photo_holder {
-/*  height: 680px;*/
 }
 
 #thumbnails img {
