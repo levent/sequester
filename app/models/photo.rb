@@ -1,8 +1,9 @@
 class Photo < ActiveRecord::Base
+  acts_as_list
   is_sluggable :title
   validates_presence_of :url
   validates_uniqueness_of :title
-  default_scope :order => "created_at DESC"
+  default_scope :order => "position"
   
   def thumb_url
     "#{url.gsub('.jpg', '')}_s.jpg"
@@ -13,7 +14,6 @@ class Photo < ActiveRecord::Base
   end
   
   def next
-    next_photo = Photo.find(:first, :conditions => ["created_at < ?", created_at])
-    next_photo || Photo.first
+    lower_item || Photo.first
   end
 end
