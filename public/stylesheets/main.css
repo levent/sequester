@@ -55,10 +55,13 @@ img.photo {
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  height: 680px;
 }
 
 #photo_holder {
   height: 685px;
+  width: 1024px;
+  text-align: center;
 }
 
 .loading {
