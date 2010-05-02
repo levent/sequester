@@ -28,7 +28,7 @@ header, section, footer, aside {
 
 h1 {
   font-size: 140%;
-/*  padding: 0 20px;*/
+  margin: 2px 0 0 0;
 }
 
 h1 a {

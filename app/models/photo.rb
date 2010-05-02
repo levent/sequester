@@ -11,4 +11,9 @@ class Photo < ActiveRecord::Base
   def large_url
     "#{url.gsub('.jpg', '')}_b.jpg"
   end
+  
+  def next
+    next_photo = Photo.find(:all, :conditions => ["id > ?", id], :limit => 1)
+    next_photo.any? ? (return next_photo) : (return Photo.last)
+  end
 end

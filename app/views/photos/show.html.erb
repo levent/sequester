@@ -1,6 +1,6 @@
 <% if @photo %>
   <div id="photo_holder">
-    <%= image_tag @photo.large_url, :title => @photo.title, :alt => @photo.title, :id => "photo_#{@photo.id}", :class => "photo" %>
+    <%= link_to image_tag(@photo.large_url, :title => @photo.title, :alt => @photo.title, :id => "photo_#{@photo.id}", :class => "photo"), photo_url(@photo.next) %>
   </div>
 <% end %>
 
