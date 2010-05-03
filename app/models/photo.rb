@@ -6,14 +6,20 @@ class Photo < ActiveRecord::Base
   default_scope :order => "position", :limit => 13
   
   def thumb_url
-    "#{url.gsub('.jpg', '')}_s.jpg"
+    url_transform('_s')
   end
   
   def large_url
-    "#{url.gsub('.jpg', '')}_b.jpg"
+    url_transform('_b')
   end
   
   def next
     lower_item || Photo.first
+  end
+  
+  protected
+  
+  def url_transform(suffix)
+    "#{url.gsub('.jpg', '')}#{suffix}.jpg"
   end
 end
