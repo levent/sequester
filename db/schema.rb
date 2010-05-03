@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100502131902) do
+ActiveRecord::Schema.define(:version => 20100503152054) do
 
   create_table "photos", :force => true do |t|
     t.string    "url"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20100502131902) do
     t.timestamp "updated_at"
     t.string    "cached_slug"
     t.integer   "position"
+    t.boolean   "portrait",    :default => false
   end
 
   add_index "photos", ["cached_slug"], :name => "index_photos_on_cached_slug"
