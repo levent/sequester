@@ -57,17 +57,25 @@ span.portrait_photography {
   opacity: 0.5;
 }
 
-img.photo {
+img.photo, .portrait {
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+}
+
+img.photo {
   height: 680px;
 }
 
 #photo_holder {
-  height: 685px;
+  height: 680px;
   width: 1024px;
+  margin: 0 0 5px 0;
   text-align: center;
+}
+
+.portrait {
+  background: #efefef;
 }
 
 .loading {
