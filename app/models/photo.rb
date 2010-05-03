@@ -3,7 +3,7 @@ class Photo < ActiveRecord::Base
   is_sluggable :title
   validates_presence_of :url
   validates_uniqueness_of :title
-  default_scope :order => "position", :limit => 13
+  default_scope :order => "position"
   
   def thumb_url
     url_transform('_s')
