@@ -1,7 +1,10 @@
 class PhotosController < ApplicationController
 
   def index
-    redirect_to photo_path(Photo.first)
+    respond_to do |format|
+      format.html {redirect_to photo_path(Photo.first)}
+      format.atom {@photos = Photo.all}
+    end
   end
   
   def show
