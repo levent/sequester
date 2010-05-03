@@ -1,4 +1,3 @@
-
 atom_feed do |feed|
   feed.title("Levent Ali Portrait Photography")
   feed.updated(@photos.first.created_at)
