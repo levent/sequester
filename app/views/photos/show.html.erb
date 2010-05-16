@@ -14,7 +14,7 @@
 
 <script type="text/javascript" charset="utf-8">
   $('#photo_holder').addClass('loading');
-  $('.photo').hide().attr('src', '<%= @photo.large_url %>').load(function () {
+  $('#photo_<%= @photo.id %>').hide().attr('src', '<%= @photo.large_url %>').load(function () {
     $(this).fadeIn(800);
     $('#photo_holder').removeClass('loading');
   });
