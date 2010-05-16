@@ -14,15 +14,11 @@
 
 <% content_for :javascript do %>
   <script type="text/javascript" charset="utf-8">
-    console.log("about to hide");
     $('#photo_holder').addClass('loading');
-    console.log("about to go crazy");
     $('#photo_<%= @photo.id %>').hide().attr('src', '<%= @photo.large_url %>').load(function () {
-      console.log("about to fade");
       $(this).fadeIn(800);
-      console.log("about to show");
       $('#photo_holder').removeClass('loading');
+      return(false);
     });
-    console.log("about to complete");
   </script>
 <% end %>
