@@ -1,6 +1,5 @@
 <% if @photo %>
   <div id="photo_holder"<%= ' class=\'portrait\'' if @photo.portrait? %>>
-    <%= link_to image_tag(@photo.large_url, :title => @photo.title, :alt => @photo.title, :id => "photo_#{@photo.id}", :class => "photo"), photo_url(@photo.next) %>
   </div>
 <% end %>
 
@@ -14,11 +13,19 @@
 
 <% content_for :javascript do %>
   <script type="text/javascript" charset="utf-8">
-    $('#photo_holder').addClass('loading');
-    $('#photo_<%= @photo.id %>').hide().attr('src', '<%= @photo.large_url %>').load(function () {
-      $(this).fadeIn(800);
-      $('#photo_holder').removeClass('loading');
-      return(false);
+    $(function () {
+      $('#photo_holder').addClass('loading');
+      var img = new Image();
+      $(img).load(function () {
+        $(img).hide();
+        $('#photo_holder').removeClass('loading').append(img);
+        <% if @photo.portrait? %>
+          $('#photo_holder').addClass('portrait')
+        <% end %>
+        $(img).fadeIn('slow');
+        var a = $('<a/>').attr('href', '<%= photo_url(@photo.next) %>');
+        $(img).wrap(a)
+      }).attr('src', '<%= @photo.large_url %>').attr('class', 'photo').attr('id', '<%= "photo_#{@photo.id}" %>' ).attr('alt', '<%= @photo.title %>' ).attr('title', '<%= @photo.title %>' );
     });
   </script>
 <% end %>
