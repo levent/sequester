@@ -25,7 +25,7 @@
         $(img).fadeIn('slow');
         var a = $('<a/>').attr('href', '<%= photo_url(@photo.next) %>');
         $(img).wrap(a)
-      }).attr('src', '<%= @photo.large_url %>').attr('class', 'photo').attr('id', '<%= "photo_#{@photo.id}" %>' ).attr('alt', '<%= @photo.title %>' ).attr('title', '<%= @photo.title %>' );
+      }).attr('src', '<%= @photo.large_url %>').attr('class', 'photo').attr('id', '<%= "photo_#{@photo.id}" %>' ).attr('alt', "<%=h @photo.title %>" ).attr('title', "<%=h @photo.title %>" );
     });
   </script>
 <% end %>
