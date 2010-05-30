@@ -5,6 +5,8 @@ class Photo < ActiveRecord::Base
   validates_uniqueness_of :title
   default_scope :order => "position"
   
+  alias_attribute :medium_url, :url
+  
   def thumb_url
     url_transform('_s')
   end
