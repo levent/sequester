@@ -22,11 +22,15 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  unicorn: 
+    group: 
+    - :default
+    version: ">= 0"
   cloudfiles: 
     group: 
     - :default
     version: ">= 0"
-  unicorn: 
+  carrierwave: 
     group: 
     - :default
     version: ">= 0"
@@ -34,14 +38,6 @@ dependencies:
     group: 
     - :default
     version: = 1.1.rc1
-  carrierwave: 
-    group: 
-    - :default
-    version: ">= 0"
-  rmagick: 
-    group: 
-    - :default
-    version: = 1.15.17
   capistrano: 
     group: 
     - :default
@@ -134,8 +130,6 @@ specs:
     version: 3.0.0.beta3
 - rails: 
     version: 3.0.0.beta3
-- rmagick: 
-    version: 1.15.17
 - ruby-debug-base: 
     version: 0.10.3
 - ruby-debug: 
@@ -144,7 +138,7 @@ specs:
     version: 1.2.5
 - unicorn: 
     version: 0.99.0
-hash: 54f9f6be1b218a00ddefebca57749a13ffedc04a
+hash: 564b5d794ccd11d1828af2ebcd5f450fb47d1ede
 sources: 
 - Git: 
     uri: http://github.com/jnicklas/carrierwave.git
