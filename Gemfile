@@ -33,8 +33,7 @@ gem 'pseudocephalopod'
 #                 :branch => 'rails3'
 gem 'carrierwave', :git => 'http://github.com/jnicklas/carrierwave.git', :branch => 'master'
 gem 'cloudfiles'
-gem 'rmagick'
-gem 'image_science'
+gem 'rmagick', '1.15.17'
 
 
 group :development do
