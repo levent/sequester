@@ -1,9 +1,9 @@
 # encoding: utf-8
-# require 'carrierwave/processing/rmagick'
+require 'carrierwave/processing/rmagick'
 class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or ImageScience support
-  # include CarrierWave::RMagick
+  include CarrierWave::RMagick
   #     include CarrierWave::ImageScience
 
   # Choose what kind of storage to use for this uploader
@@ -31,7 +31,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   #     def scale(width, height)
   #       # do something
   #     end
-  # process :resize_to_fit => [1024, 1024]
+  process :resize_to_fit => [1024, 1024]
 
   # version :medium do
   #   process :resize_to_fit => [800, 800]
