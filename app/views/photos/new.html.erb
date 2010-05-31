@@ -1,0 +1,16 @@
+<%= @photo.errors.full_messages %>
+
+<%= form_for @photo, :html => {:multipart => true} do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  
+  <%= f.label :remote_image_url %>
+  <%= f.text_field :remote_image_url %>
+  
+  <%= f.hidden_field :image_cache %>
+  <%= f.submit %>
+
+<% end %>

@@ -1,5 +1,9 @@
 --- 
 dependencies: 
+  ruby-debug: 
+    group: 
+    - :development
+    version: ">= 0"
   acts_as_list: 
     group: 
     - :default
@@ -18,6 +22,10 @@ dependencies:
     group: 
     - :default
     version: ">= 0"
+  cloudfiles: 
+    group: 
+    - :default
+    version: ">= 0"
   unicorn: 
     group: 
     - :default
@@ -25,8 +33,12 @@ dependencies:
   devise: 
     group: 
     - :default
-    version: = 1.1.rc0
-  warden: 
+    version: = 1.1.rc1
+  carrierwave: 
+    group: 
+    - :default
+    version: ">= 0"
+  rmagick: 
     group: 
     - :default
     version: ">= 0"
@@ -46,7 +58,7 @@ specs:
 - memcache-client: 
     version: 1.8.3
 - tzinfo: 
-    version: 0.3.20
+    version: 0.3.22
 - activesupport: 
     version: 3.0.0.beta3
 - activemodel: 
@@ -58,7 +70,7 @@ specs:
 - rack-mount: 
     version: 0.6.3
 - rack-test: 
-    version: 0.5.3
+    version: 0.5.4
 - actionpack: 
     version: 3.0.0.beta3
 - mime-types: 
@@ -66,9 +78,9 @@ specs:
 - polyglot: 
     version: 0.3.1
 - treetop: 
-    version: 1.4.5
+    version: 1.4.8
 - mail: 
-    version: 2.2.0
+    version: 2.2.1
 - text-hyphen: 
     version: 1.0.0
 - text-format: 
@@ -84,7 +96,7 @@ specs:
 - acts_as_list: 
     version: 0.1.2
 - bundler: 
-    version: 0.9.24
+    version: 0.9.25
 - highline: 
     version: 1.5.2
 - net-ssh: 
@@ -97,14 +109,23 @@ specs:
     version: 1.0.1
 - capistrano: 
     version: 2.5.18
+- carrierwave: 
+    version: 0.4.4
+    source: 0
+- cloudfiles: 
+    version: 1.4.7
+- columnize: 
+    version: 0.3.1
 - warden: 
-    version: 0.10.3
+    version: 0.10.7
 - devise: 
-    version: 1.1.rc0
+    version: 1.1.rc1
+- linecache: 
+    version: "0.43"
 - macaddr: 
     version: 1.0.0
 - uuid: 
-    version: 2.3.0
+    version: 2.3.1
 - pseudocephalopod: 
     version: 0.2.2
 - thor: 
@@ -113,11 +134,22 @@ specs:
     version: 3.0.0.beta3
 - rails: 
     version: 3.0.0.beta3
+- rmagick: 
+    version: 2.13.1
+- ruby-debug-base: 
+    version: 0.10.3
+- ruby-debug: 
+    version: 0.10.3
 - sqlite3-ruby: 
     version: 1.2.5
 - unicorn: 
-    version: 0.97.1
-hash: 1e9c40ad72b65c4e5bb84b733376946d510831ba
+    version: 0.99.0
+hash: bac3e0bbef80e6f7aa12da36f2ecd8fb3bf7771c
 sources: 
+- Git: 
+    uri: http://github.com/jnicklas/carrierwave.git
+    branch: master
+    git: http://github.com/jnicklas/carrierwave.git
+    ref: 9349c1d8e520f165420d8eeed1fa5df5c036f724
 - Rubygems: 
     uri: http://rubygems.org
