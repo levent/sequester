@@ -22,11 +22,8 @@ class Photo < ActiveRecord::Base
   protected
   
   def url_cf_transform
-    # debugger
     regex = /(http:\/\/\w*.cdn.cloudfiles.rackspacecloud.com\/uploads\/photo\/image\/\d*\/)(\w*.jpg)/
-    x = url.gsub(regex) {|match| "#{$1}thumb_#{$2}"}
-    p x
-    x
+    url.gsub(regex) {|match| "#{$1}thumb_#{$2}"}
   end
   
  # def url_transform(suffix)
