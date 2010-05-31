@@ -18,6 +18,10 @@ dependencies:
     version: ">= 0"
     require: 
     - sqlite3
+  image_science: 
+    group: 
+    - :default
+    version: ">= 0"
   pseudocephalopod: 
     group: 
     - :default
@@ -38,6 +42,10 @@ dependencies:
     group: 
     - :default
     version: = 1.1.rc1
+  rmagick: 
+    group: 
+    - :default
+    version: ">= 0"
   capistrano: 
     group: 
     - :default
@@ -116,6 +124,8 @@ specs:
     version: 0.10.7
 - devise: 
     version: 1.1.rc1
+- image_science: 
+    version: 1.2.1
 - linecache: 
     version: "0.43"
 - macaddr: 
@@ -130,6 +140,8 @@ specs:
     version: 3.0.0.beta3
 - rails: 
     version: 3.0.0.beta3
+- rmagick: 
+    version: 2.13.1
 - ruby-debug-base: 
     version: 0.10.3
 - ruby-debug: 
@@ -138,7 +150,7 @@ specs:
     version: 1.2.5
 - unicorn: 
     version: 0.99.0
-hash: 536a8424bcce8d367abd269b61c3f4b26856e338
+hash: 0a91c4930f504e84941ca737ea7cb362aa271203
 sources: 
 - Git: 
     uri: http://github.com/jnicklas/carrierwave.git
