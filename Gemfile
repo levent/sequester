@@ -26,6 +26,16 @@ gem 'capistrano'
 #   gem 'webrat'
 # end
 
-gem 'warden'
-gem 'devise', '1.1.rc0'
+# gem 'warden'
+gem 'devise', '1.1.rc1'
 gem 'pseudocephalopod'
+#gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git',
+#                 :branch => 'rails3'
+gem 'carrierwave', :git => 'http://github.com/jnicklas/carrierwave.git', :branch => 'master'
+gem 'cloudfiles'
+gem 'rmagick'
+
+
+group :development do
+  gem 'ruby-debug'
+end

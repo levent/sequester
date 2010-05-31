@@ -1,18 +1,18 @@
+require 'carrierwave/orm/activerecord'
 class Photo < ActiveRecord::Base
   acts_as_list
   is_sluggable :title
-  validates_presence_of :url
+  validates_presence_of :title
   validates_uniqueness_of :title
   default_scope :order => "position"
   
   alias_attribute :medium_url, :url
+
+  mount_uploader :image, ImageUploader
   
   def thumb_url
-    url_transform('_s')
-  end
-  
-  def large_url
-    url_transform('_b')
+    cache_url if url.blank?
+    url_cf_transform
   end
   
   def next
@@ -21,7 +21,20 @@ class Photo < ActiveRecord::Base
   
   protected
   
-  def url_transform(suffix)
-    "#{url.gsub('.jpg', '')}#{suffix}.jpg"
+  def url_cf_transform
+    # debugger
+    regex = /(http:\/\/\w*.cdn.cloudfiles.rackspacecloud.com\/uploads\/photo\/image\/\d*\/)(\w*.jpg)/
+    x = url.gsub(regex) {|match| "#{$1}thumb_#{$2}"}
+    p x
+    x
   end
+  
+ # def url_transform(suffix)
+ #   "#{url.gsub('.jpg', '')}#{suffix}.jpg"
+ # end
+ 
+ def cache_url
+   self.url = self.image.url
+   save!
+ end
 end

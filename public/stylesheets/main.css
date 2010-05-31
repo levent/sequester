@@ -141,3 +141,5 @@ footer a, a.back_link {
 footer a:hover {
   color: #C72270;
 }
+
+form.new_photo label, form.new_photo input {display: block}
