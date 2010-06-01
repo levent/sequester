@@ -1,0 +1,5 @@
+<ol>
+<% for photo in @photos %>
+  <li><%= image_tag photo.thumb_url %> <%= link_to "edit", edit_photo_url(photo) %></li>
+<% end %>
+</ol>
