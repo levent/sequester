@@ -64,6 +64,13 @@ header div#atom_feed {
   margin: 8px 0 0 0;
 }
 
+header #logout {
+  float: right;
+  margin: 5px 4px 0 0;
+  text-decoration: none;
+  color: #333;
+}
+
 .body {
   margin: 0 auto;
   width: 1024px;
@@ -142,4 +149,4 @@ footer a:hover {
   color: #C72270;
 }
 
-form.new_photo label, form.new_photo input {display: block}
+form.edit_photo label, form.edit_photo input, form.new_photo label, form.new_photo input {display: block}

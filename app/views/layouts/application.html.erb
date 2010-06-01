@@ -28,6 +28,7 @@
   <header class="body">
     <h1><a href="/">Levent Ali<span class="portrait_photography"> Portrait Photography</span></a></h1>
     <div id="atom_feed"><%= link_to image_tag("feed.png"), photos_url(:format => :atom) %></div>
+    <%= link_to "logout", destroy_admin_session_url, :id => "logout" if admin_signed_in? %>
   </header>
   <section id="content" class="body">
     <%= yield %>

@@ -9,25 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100531130442) do
+ActiveRecord::Schema.define(:version => 20100601200715) do
 
   create_table "admins", :force => true do |t|
-    t.string   "email",                               :default => "", :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string   "password_salt",                       :default => "", :null => false
-    t.string   "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "reset_password_token"
-    t.string   "remember_token"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                       :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "email",                               :default => "", :null => false
+    t.string    "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string    "password_salt",                       :default => "", :null => false
+    t.string    "confirmation_token"
+    t.timestamp "confirmed_at"
+    t.timestamp "confirmation_sent_at"
+    t.string    "reset_password_token"
+    t.string    "remember_token"
+    t.timestamp "remember_created_at"
+    t.integer   "sign_in_count",                       :default => 0
+    t.timestamp "current_sign_in_at"
+    t.timestamp "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   add_index "admins", ["confirmation_token"], :name => "index_admins_on_confirmation_token", :unique => true
@@ -42,8 +42,9 @@ ActiveRecord::Schema.define(:version => 20100531130442) do
     t.timestamp "updated_at"
     t.string    "cached_slug"
     t.integer   "position"
-    t.boolean   "portrait",    :default => false
+    t.boolean   "portrait",            :default => false
     t.string    "image"
+    t.string    "flickr_original_url"
   end
 
   add_index "photos", ["cached_slug"], :name => "index_photos_on_cached_slug"
