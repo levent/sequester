@@ -1,7 +1,12 @@
 Sequester::Application.routes.draw do |map|
   devise_for :admins
 
-  resources :photos
+  resources :photos do
+    member do
+      post :up
+      post :down
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
