@@ -1,8 +1,17 @@
 class PhotosController < ApplicationController
   
   before_filter :authenticate_admin!, :only => [:new, :create, :edit, :list, :update]
-  before_filter :load_photo, :only => [:edit, :update, :show]
+  before_filter :load_photo, :only => [:edit, :update, :show, :up, :down]
+
+  def up
+    @photo.move_higher
+    redirect_to photos_url
+  end
   
+  def down
+    @photo.move_lower
+    redirect_to photos_url
+  end
   
   def edit
   end

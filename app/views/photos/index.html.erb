@@ -1,6 +1,6 @@
-<ol>
+<ol id="admin_list">
 <% for photo in @photos %>
-  <li><%= image_tag photo.thumb_url %> <%= link_to "edit", edit_photo_url(photo) %></li>
+  <li><%= image_tag photo.thumb_url %> <%= link_to "edit", edit_photo_url(photo) %> <%= button_to "↑", up_photo_url(photo) unless photo.first? %> <%= button_to "↓", down_photo_url(photo) unless photo.last? %></li>
 <% end %>
 </ol>
 <p><%= link_to new_photo_url %><p>
