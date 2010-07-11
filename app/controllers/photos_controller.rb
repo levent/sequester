@@ -43,7 +43,7 @@ class PhotosController < ApplicationController
       render and return false
     end
     respond_to do |format|
-      format.html {redirect_to photo_path(Photo.first)}
+      format.html {redirect_to photo_path(Photo.first(:offset => rand(Photo.count)))}
       format.atom {@photos = Photo.all(:order => "created_at DESC")}
     end
   end
