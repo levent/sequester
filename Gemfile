@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.beta4'
+gem 'rails', '3.0.0.rc'
 gem 'acts_as_list'
 
 # Bundle edge Rails instead:
@@ -27,7 +27,7 @@ gem 'capistrano'
 # end
 
 # gem 'warden'
-gem 'devise', '1.1.rc2'
+gem 'devise', '1.1.1'
 gem 'pseudocephalopod'
 #gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git',
 #                 :branch => 'rails3'
