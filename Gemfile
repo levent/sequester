@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'bundler', '1.0.0.rc.2'
 gem 'rails', '3.0.0.rc'
 gem 'acts_as_list'
 

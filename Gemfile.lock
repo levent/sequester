@@ -118,6 +118,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_list
+  bundler (= 1.0.0.rc.2)
   capistrano
   carrierwave!
   cloudfiles
