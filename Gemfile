@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'bundler', '1.0.0.rc.2'
-gem 'rails', '3.0.0.rc'
+gem 'bundler', '1.0.0'
+gem 'rails', '3.0.0'
 gem 'acts_as_list'
 
 # Bundle edge Rails instead:
@@ -28,7 +28,7 @@ gem 'capistrano'
 # end
 
 # gem 'warden'
-gem 'devise', '1.1.1'
+gem 'devise', '1.1.2'
 gem 'pseudocephalopod'
 #gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git',
 #                 :branch => 'rails3'
