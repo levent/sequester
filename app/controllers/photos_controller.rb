@@ -3,6 +3,8 @@ class PhotosController < ApplicationController
   before_filter :authenticate_admin!, :only => [:new, :create, :edit, :list, :update]
   before_filter :load_photo, :only => [:edit, :update, :show, :up, :down]
 
+  caches_page :show
+
   def up
     @photo.move_higher
     redirect_to photos_url
@@ -17,6 +19,7 @@ class PhotosController < ApplicationController
   end
   
   def update
+    expire_page :action => :show
     if @photo.update_attributes(params[:photo])
       redirect_to photos_url
     else
@@ -29,6 +32,7 @@ class PhotosController < ApplicationController
   end
 
   def create
+    expire_page :action => :show
     @photo = Photo.new(params[:photo])
     if @photo.save
       redirect_to photos_path

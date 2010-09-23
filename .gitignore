@@ -6,4 +6,5 @@ tmp/**/*
 config/database.yml
 .DS_Store
 public/uploads/tmp
+public/photos
 *.swp
