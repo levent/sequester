@@ -37,6 +37,6 @@ gem 'cloudfiles'
 gem 'rmagick', '2.12.2'
 
 
-group :development do
-  gem 'ruby-debug'
-end
+# group :development do
+#   gem 'ruby-debug'
+# end
