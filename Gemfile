@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'bundler', '1.0.0'
-gem 'rails', '3.0.0'
+gem 'bundler', '1.0.3'
+gem 'rails', '3.0.1'
 gem 'acts_as_list'
 
 # Bundle edge Rails instead:
