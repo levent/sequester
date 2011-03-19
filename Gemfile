@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'bundler', '1.0.3'
-gem 'rails', '3.0.1'
+gem 'rails', '3.0.5'
 gem 'acts_as_list'
 
 # Bundle edge Rails instead:
@@ -29,10 +28,10 @@ gem 'capistrano'
 
 # gem 'warden'
 gem 'devise', '1.1.2'
-gem 'pseudocephalopod'
+gem 'pseudocephalopod', '0.3.2'
 #gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git',
 #                 :branch => 'rails3'
-gem 'carrierwave', :git => 'http://github.com/jnicklas/carrierwave.git', :branch => 'master'
+gem 'carrierwave', '0.5.2'
 gem 'cloudfiles'
 gem 'rmagick', '2.12.2'
 
