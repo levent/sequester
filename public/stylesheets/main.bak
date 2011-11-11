@@ -1,0 +1,156 @@
+/*
+  Name: Levent Ali
+  Date: April 2010
+  Description: Photographer's Portfolio
+  Version: 1.0
+  Author: Levent Ali
+  Autor URI: http://purebreeze.com
+*/
+
+/* Imports */
+@import url("reset.css");
+
+/*@import url("global-forms.css");*/
+
+/***** Global *****/
+/* Body */
+body {
+  font-size: 87.5%; /* Base font size: 14px */
+  line-height: 1.429;
+  margin: 0;
+  padding: 0;
+  font-family: helvetica;
+}
+
+.large_image_height {
+  height: 680px;
+}
+
+.large_image_width {
+  height: 1024px;
+}
+
+.medium_image_height {
+  height: 332px;
+}
+
+.medium_image_width {
+  height: 500px;
+}
+
+header, section, footer, aside {
+  display: block;
+  clear: both;
+}
+
+h1 {
+  float: left;
+  font-size: 140%;
+  margin: 2px 0 0 0;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #000;
+}
+
+h2.warning {
+  text-align: center;
+  margin: 100px 0 80px 0;
+}
+
+header div#atom_feed {
+  float: right;
+  margin: 8px 0 0 0;
+}
+
+header #logout {
+  float: right;
+  margin: 5px 4px 0 0;
+  text-decoration: none;
+  color: #333;
+}
+
+.body {
+  margin: 0 auto;
+  width: 1024px;
+}
+
+.clear {
+  clear:both;
+  
+}
+
+span.portrait_photography {
+  color: #ccc;
+}
+
+.current_photo {
+  opacity: 0.5;
+}
+
+img.photo, .portrait {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+img.photo {
+  height: 680px;
+}
+
+#photo_holder {
+  height: 680px;
+  width: 1024px;
+  margin: 0 0 5px 0;
+  text-align: center;
+}
+
+.portrait {
+  background: #efefef;
+}
+
+.loading {
+  background: url(/images/spinner.gif) no-repeat center center;
+}
+
+#thumbnails img {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+footer {
+  font-size: 80%;
+  padding: 10px 0 0 0;
+}
+
+footer p.copyright {
+  text-align: right;
+}
+
+footer p.disclaimer {
+  text-align: center;
+  color: #ccc;
+  padding: 20px 0;
+}
+
+footer p.disclaimer:hover {
+  color: #000;
+}
+
+footer a, a.back_link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #13636F;
+}
+
+footer a:hover {
+  color: #C72270;
+}
+
+form.edit_photo label, form.edit_photo input, form.new_photo label, form.new_photo input {display: block}
+
+ol#admin_list div, ol#admin_list form {
+  display:inline;
+}

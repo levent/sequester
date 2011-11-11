@@ -6,11 +6,15 @@
   Author: Levent Ali
   Autor URI: http://purebreeze.com
 */
+
 /* Imports */
 @import url("reset.css");
+
 /*@import url("global-forms.css");*/
+
 /***** Global *****/
 /* Body */
+
 body {
   font-size: 87.5%;
   /* Base font size: 14px */
@@ -44,27 +48,35 @@ h2.warning {
   text-align: center;
   margin: 100px 0 80px 0; }
 
-header div#atom_feed {
-  float: right;
-  margin: 8px 0 0 0; }
-header #logout {
-  float: right;
-  margin: 5px 4px 0 0;
-  text-decoration: none;
-  color: #333; }
-
-.body ul li {
-  float: left;
-  margin: 2px 0 0 .45em; }
-  .body ul li a {
-    font-size: 140%;
-    font-weight: bold;
+header {
+  div#atom_feed {
+    float: right;
+    margin: 8px 0 0 0; }
+  #logout {
+    float: right;
+    margin: 5px 4px 0 0;
     text-decoration: none;
-    color: #999; }
-    .body ul li a.current {
-      color: #ccc; }
-    .body ul li a:hover {
-      color: #ccc; }
+    color: #333; } }
+  .body {
+    ul {
+      li {
+        float:left;
+        margin: 2px 0 0 .45em;
+        a {
+          font-size: 140%;
+          font-weight: bold;
+          text-decoration: none;
+          color: #999;
+          &.current {
+            color: #ccc;
+          }
+          &:hover {
+            color: #ccc;
+          }
+        } 
+      }
+    }
+  }
 
 .body {
   margin: 0 auto;
@@ -103,19 +115,20 @@ img.photo {
 
 footer {
   font-size: 80%;
-  padding: 10px 0 0 0; }
-  footer p.copyright {
-    text-align: right; }
-  footer p.disclaimer {
-    text-align: center;
-    color: #ccc;
-    padding: 20px 0; }
-    footer p.disclaimer:hover {
-      color: #000; }
-  footer a {
+  padding: 10px 0 0 0;
+  p {
+    &.copyright {
+      text-align: right; }
+    &.disclaimer {
+      text-align: center;
+      color: #ccc;
+      padding: 20px 0;
+      &:hover {
+        color: #000; } } }
+  a {
     font-weight: bold;
     text-decoration: none;
-    color: #13636F; }
+    color: #13636F; } }
 
 a.back_link {
   font-weight: bold;
@@ -125,10 +138,15 @@ a.back_link {
 footer a:hover {
   color: #C72270; }
 
-form.edit_photo label, form.edit_photo input {
-  display: block; }
-form.new_photo label, form.new_photo input {
-  display: block; }
+form {
+  &.edit_photo {
+    label, input {
+      display: block; } }
+  &.new_photo {
+    label, input {
+      display: block; } } }
 
-ol#admin_list div, ol#admin_list form {
-  display: inline; }
+ol#admin_list {
+  div, form {
+    display: inline; } }
+

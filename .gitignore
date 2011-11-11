@@ -9,3 +9,4 @@ public/uploads/tmp
 *.swp
 .rvmrc
 .gem
+public/*.css
